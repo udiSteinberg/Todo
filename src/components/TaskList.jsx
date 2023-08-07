@@ -8,7 +8,7 @@ export const TaskList = (props) => {
         {
             props.tasks_ar.map(item =>{
                 return(
-                    <Task key={item.id} item={item}/>
+                    <Task key={item.id} item={item} removeSingleTask = {props.removeSingleTask}/>
                 )
             })
         }

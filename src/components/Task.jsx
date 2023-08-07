@@ -5,7 +5,9 @@ export const Task = (props) => {
 
     return (
         <div className='shadow my-2 p-2'>
-            <button className='btn btn-info float-end'>Done</button>
+            <button
+                className='btn btn-info float-end'
+                onClick={() => { props.removeSingleTask(id) }}>Done</button>
             <h4>{name} - {time}</h4>
         </div>
     )
