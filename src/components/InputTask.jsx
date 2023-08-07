@@ -7,11 +7,11 @@ export const InputTask = (props) => {
 
     const addTask = () => {
         let toDoItem = {
-            id:Date.now(),
-            name:nameRef.current.value,
-            time:timeRef.current.value
+            id: Date.now(),
+            name: nameRef.current.value,
+            time: timeRef.current.value
         }
-        
+
         props.addTaskToArr(toDoItem);
     }
 
@@ -34,7 +34,9 @@ export const InputTask = (props) => {
                     className='btn btn-success me-2'
                     onClick={addTask}
                 >Add Task</button>
-                <button className='btn btn-danger'>Reset Tasks</button>
+                <button
+                    className='btn btn-danger'
+                    onClick={() => {props.removeAllTasks()}}>Reset Tasks</button>
             </div>
         </div>
     )

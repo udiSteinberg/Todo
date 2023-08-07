@@ -1,11 +1,17 @@
 import React from 'react'
 import { Task } from './Task'
 
-export const TaskList = () => {
+export const TaskList = (props) => {
   return (
     <div>
         <h3>Tasks You Added:</h3>
-        <Task/>
+        {
+            props.tasks_ar.map(item =>{
+                return(
+                    <Task key={item.id} item={item}/>
+                )
+            })
+        }
     </div>
   )
 }
