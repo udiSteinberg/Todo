@@ -6,8 +6,6 @@ export const TaskList = () => {
     <div>
         <h3>Tasks You Added:</h3>
         <Task/>
-        <Task/>
-        <Task/>
     </div>
   )
 }
